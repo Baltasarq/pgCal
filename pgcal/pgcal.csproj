@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C722FFA-B177-4EF3-928C-D9759DD50D76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pgcal</RootNamespace>
+    <AssemblyName>pgcal</AssemblyName>
+    <StartupObject>pgcal.Gui.Ppal</StartupObject>
+    <ApplicationIcon>Res\calendarIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Gui\MainWindow.cs" />
+    <Compile Include="Gui\Ppal.cs" />
+    <Compile Include="Core\AppInfo.cs" />
+    <Compile Include="Core\GCalFramework.cs" />
+    <Compile Include="Gui\CalendarView.cs" />
+    <Compile Include="Core\EventConverter.cs" />
+    <Compile Include="Core\Locale.cs" />
+    <Compile Include="Core\StringsL18n.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System" />
+    <Reference Include="Google.GData.Extensions">
+      <HintPath>..\googlelibs\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.AccessControl">
+      <HintPath>..\googlelibs\Google.GData.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client">
+      <HintPath>..\googlelibs\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Calendar">
+      <HintPath>..\googlelibs\Google.GData.Calendar.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Gui\" />
+    <Folder Include="Res\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Res\calendarIcon.png" />
+    <EmbeddedResource Include="Res\deleteIcon.png" />
+    <EmbeddedResource Include="Res\editIcon.png" />
+    <EmbeddedResource Include="Res\saveIcon.png" />
+    <EmbeddedResource Include="Res\exportIcon.png" />
+    <EmbeddedResource Include="Res\infoIcon.png" />
+    <EmbeddedResource Include="Res\refreshIcon.png" />
+    <EmbeddedResource Include="Res\settingsIcon.png" />
+    <EmbeddedResource Include="Res\userIcon.png" />
+    <EmbeddedResource Include="Res\webIcon.png" />
+    <EmbeddedResource Include="Res\shutdownIcon.png" />
+    <EmbeddedResource Include="Res\nextIcon.png" />
+    <EmbeddedResource Include="Res\previousIcon.png" />
+    <EmbeddedResource Include="Res\windowIcon.png" />
+    <EmbeddedResource Include="Res\backIcon.png" />
+  </ItemGroup>
+</Project>

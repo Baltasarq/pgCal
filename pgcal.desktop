@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=pgCal
+Comment=Manage your Google calendar
+Exec=mono /home/baltasarq/Dropbox/prys/pgcal/pgcal/bin/Release/pgcal.exe
+Icon=/home/baltasarq/Dropbox/prys/pgcal/pgcal/Res/calendarIcon.png
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Office
